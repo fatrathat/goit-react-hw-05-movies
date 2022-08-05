@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
 
-const MovieList = ({ trend }) => {
+const MovieList = ({ data }) => {
   return (
     <ul>
-      {trend.map(({ title, id }) => {
+      {data.map(({ title, id }) => {
         return (
           <li key={id}>
             <Link to={`/movies/${id}`}>{title}</Link>

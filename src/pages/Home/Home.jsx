@@ -12,7 +12,7 @@ const Home = () => {
     });
   }, []);
 
-  return <>{trendMovies && <MovieList trend={trendMovies} />}</>;
+  return <>{trendMovies && <MovieList data={trendMovies} />}</>;
 };
 
 export default Home;
