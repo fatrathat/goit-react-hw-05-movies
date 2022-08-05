@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-
 import { axiosMovieDetails } from 'service/axiosAPI';
+
+import MovieInfo from 'components/MovieInfo/MovieInfo';
 
 const MovieDetails = () => {
   const { movieId } = useParams();
@@ -13,18 +14,23 @@ const MovieDetails = () => {
       setMovieDetail(detail);
     });
   }, [movieId]);
-  console.log(movieDetail);
 
   const buttonBackHandler = () => {
     navigateBack(-1);
   };
 
   return (
-    <div>
-      <button type="button" onClick={buttonBackHandler}>
-        Go back
-      </button>
-    </div>
+    <>
+      {movieDetail && (
+        <div>
+          <button type="button" onClick={buttonBackHandler}>
+            Go back
+          </button>
+
+          <MovieInfo data={movieDetail} />
+        </div>
+      )}
+    </>
   );
 };
 
