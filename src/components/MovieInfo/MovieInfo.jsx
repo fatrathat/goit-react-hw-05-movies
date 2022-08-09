@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 const MovieInfo = ({ data }) => {
   const { poster_path, title, vote_average, overview, genres } = data;
 
@@ -21,3 +23,7 @@ const MovieInfo = ({ data }) => {
 };
 
 export default MovieInfo;
+
+MovieInfo.propTypes = {
+  data: PropTypes.object.isRequired,
+};

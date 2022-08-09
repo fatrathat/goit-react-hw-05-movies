@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 const MovieList = ({ data }) => {
   return (
@@ -15,3 +16,7 @@ const MovieList = ({ data }) => {
 };
 
 export default MovieList;
+
+MovieList.propTypes = {
+  data: PropTypes.array.isRequired,
+};

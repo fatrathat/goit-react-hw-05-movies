@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 const AdditionalInfo = ({ id }) => {
   return (
@@ -17,3 +18,7 @@ const AdditionalInfo = ({ id }) => {
 };
 
 export default AdditionalInfo;
+
+AdditionalInfo.propTypes = {
+  id: PropTypes.string.isRequired,
+};

@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 const ReviewsInfo = ({ data }) => {
   return (
     <>
@@ -16,3 +18,7 @@ const ReviewsInfo = ({ data }) => {
 };
 
 export default ReviewsInfo;
+
+ReviewsInfo.propTypes = {
+  data: PropTypes.array.isRequired,
+};

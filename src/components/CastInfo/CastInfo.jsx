@@ -1,4 +1,4 @@
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 import def_img from '../../images/photo.jpg';
 
@@ -27,3 +27,7 @@ const CastInfo = ({ data }) => {
 };
 
 export default CastInfo;
+
+CastInfo.propTypes = {
+  data: PropTypes.array.isRequired,
+};
