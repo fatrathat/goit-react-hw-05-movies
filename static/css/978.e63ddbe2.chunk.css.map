@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/978.e63ddbe2.chunk.css","mappings":"AAAA,2BACE,gBACF,CAEA,sBACE,WACF","sources":["components/CastInfo/style.module.css"],"sourcesContent":[".CastInfoList {\n  margin-left: 15px;\n}\n\n.CastImg {\n  width: 200px;\n}\n"],"names":[],"sourceRoot":""}

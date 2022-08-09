@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/278.f5ede17f.chunk.css","mappings":"AAAA,wBACE,YACF","sources":["components/MoviesList/style.module.css"],"sourcesContent":[".MovieList {\n  padding: 25px;\n}\n"],"names":[],"sourceRoot":""}
