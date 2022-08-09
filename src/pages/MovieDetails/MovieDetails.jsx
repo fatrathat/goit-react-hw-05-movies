@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 import { axiosMovieDetails } from 'service/axiosAPI';
 import AdditionalInfo from 'components/AdditionalInfo/AdditionalInfo';
 
@@ -33,6 +34,7 @@ const MovieDetails = () => {
           <AdditionalInfo id={movieId} />
         </div>
       )}
+      <Outlet />
     </>
   );
 };
