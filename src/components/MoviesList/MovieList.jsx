@@ -1,9 +1,10 @@
 import { Link } from 'react-router-dom';
+import styles from './style.module.css';
 import PropTypes from 'prop-types';
 
 const MovieList = ({ data }) => {
   return (
-    <ul>
+    <ul className={styles.MovieList}>
       {data.map(({ title, id }) => {
         return (
           <li key={id}>

@@ -1,12 +1,8 @@
 import { Routes, Route, NavLink } from 'react-router-dom';
 import { lazy, Suspense } from 'react';
 
-// import Home from 'pages/Home/Home';
-// import Movies from 'pages/Movies/Movies';
-// import MovieDetails from 'pages/MovieDetails/MovieDetails';
-// import Cast from 'pages/Cast/Cast';
-// import Reviews from 'pages/Reviews/Reviews';
-// import NotFound from 'pages/NotFound/NotFound';
+import styles from './style.module.css';
+import styled from 'styled-components';
 
 const Home = lazy(() => import('pages/Home/Home'));
 const Movies = lazy(() => import('pages/Movies/Movies'));
@@ -15,12 +11,23 @@ const Cast = lazy(() => import('pages/Cast/Cast'));
 const Reviews = lazy(() => import('pages/Reviews/Reviews'));
 const NotFound = lazy(() => import('pages/NotFound/NotFound'));
 
+const StyledLink = styled(NavLink)`
+  text-decoration: none;
+  margin-left: 10px;
+  font-size: 24px;
+  color: black;
+
+  &.active {
+    color: blue;
+  }
+`;
+
 export const App = () => {
   return (
     <div>
-      <nav>
-        <NavLink to="/">Home</NavLink>
-        <NavLink to="/movies">Movies</NavLink>
+      <nav className={styles.navbar}>
+        <StyledLink to="/">Home</StyledLink>
+        <StyledLink to="/movies">Movies</StyledLink>
       </nav>
       <Suspense fallback={<div>Loading...</div>}>
         <Routes>

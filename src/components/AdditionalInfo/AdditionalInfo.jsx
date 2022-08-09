@@ -1,11 +1,12 @@
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import styles from './style.module.css';
 
 const AdditionalInfo = ({ id }) => {
   return (
     <>
       <p>Additional info</p>
-      <ul>
+      <ul className={styles.AdditionalInfoList}>
         <li>
           <Link to={`/movies/${id}/cast`}>Cast</Link>
         </li>
